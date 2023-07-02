@@ -49,7 +49,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
         m=await message.reply_sticker("CAACAgUAAxkBAAIFNGJSlfOErbkSeLt9SnOniU-58UUBAAKaAAPIlGQULGXh4VzvJWoeBA")
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -76,9 +76,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("♻️ Try Again", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("Try Again ♻️", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton(" ♻️ Try Again", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("Try Again ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=FORCE_SUB_TEXT,
@@ -99,7 +99,7 @@ async def start(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action(enums.ChatAction.TYPING)
         m=await message.reply_sticker("CAACAgUAAxkBAAIFNGJSlfOErbkSeLt9SnOniU-58UUBAAKaAAPIlGQULGXh4VzvJWoeBA")
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
         await m.delete()
         await message.reply_photo(
             photo=random.choice(PICS),
