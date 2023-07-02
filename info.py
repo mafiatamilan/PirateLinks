@@ -28,7 +28,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS' ,'https://te.legra.ph/file/068c7b2fbcfddbc1db13a.jpg https://te.legra.ph/file/8224a9f5f925826db99df.jpg')).split()
+PICS = (environ.get('PICS' ,' ')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
@@ -65,7 +65,7 @@ SHORT_API = environ.get("SHORT_API")
 # Others
 IMDB_DELET_TIME = int(environ.get('IMDB_DELET_TIME', "300"))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001961559386))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'piraterequest')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Hydrarequest')
 P_TTI_SHOW_OFF = is_enabled(environ.get('P_TTI_SHOW_OFF', "True"), True)
 PM_IMDB = is_enabled(environ.get('PM_IMDB', "False"), False)
 IMDB = is_enabled(environ.get('IMDB', "False"), False) 
