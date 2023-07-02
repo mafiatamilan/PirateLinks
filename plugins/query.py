@@ -526,13 +526,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton("➕️ 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🍁", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("Fᴜɴᴄᴛɪᴏɴs ⚙️", callback_data="help"),
+            InlineKeyboardButton("Mᴀɪɴ Cʜᴀɴɴᴇʟ🚀", url=f")
             ],[
-            InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
-            InlineKeyboardButton("💫 𝙰𝙱𝙾𝚄𝚃 💫", callback_data="about")
+          #  InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿 ℹ️", callback_data="help"),
+            InlineKeyboardButton("Aʙᴏᴜᴛ ", callback_data="about")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -570,33 +570,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('⚙️ 𝙰𝙳𝙼𝙸𝙽 𝙿𝙰𝙽𝙴𝙻 ⚙️', callback_data='admin')            
-            ],[
-            InlineKeyboardButton('𝙼𝙰𝙽𝚄𝙴𝙻 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='manuelfilter'),
-            InlineKeyboardButton('𝙰𝚄𝚃𝙾 𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='autofilter'),
-            InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽𝚂', callback_data='coct')
+        #    InlineKeyboardButton('⚙️ 𝙰𝙳𝙼𝙸𝙽 𝙿𝙰𝙽𝙴𝙻 ⚙️', callback_data='admin')            
+         #   ],[
+            InlineKeyboardButton('🌀 Mᴀɴᴜᴀʟ Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton('🔥 Aᴜᴛᴏ Fɪʟᴛᴇʀ', callback_data='autofilter')
+            
             ],[                       
-            InlineKeyboardButton('𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙿𝙷', callback_data='tele'),
-            InlineKeyboardButton('𝚂𝙷𝙰𝚁𝙴-𝚃𝙴𝚇𝚃', callback_data='sharetxt'),
-            InlineKeyboardButton('𝙵𝙸𝙻𝙴-𝚂𝚃𝙾𝚁𝙴', callback_data='newdata')
+            InlineKeyboardButton('🌐 Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
+            InlineKeyboardButton('📌 Pɪɴ', callback_data='pin'),
+            InlineKeyboardButton('🗑️ Pᴜʀɢᴇ', callback_data='purges')
+         
             ],[           
-            InlineKeyboardButton('𝙹𝚂𝙾𝙽𝙴', callback_data='son'),
-            InlineKeyboardButton('𝚃𝚃𝚂', callback_data='ttss'),           
-            InlineKeyboardButton('𝙿𝚄𝚁𝙶𝙴', callback_data='purges')
+                       
+            InlineKeyboardButton('⚡ Sᴘᴇᴇᴅ', callback_data='pings'),
+            InlineKeyboardButton('😜 Mᴜᴛᴇ', callback_data='restric'),
+            InlineKeyboardButton('☢️ Kɪᴄᴋ', callback_data='zombies')
             ],[
-            InlineKeyboardButton('𝙿𝙰𝚂𝚃𝙴', callback_data='pastes'),
-            InlineKeyboardButton("𝙸𝙼𝙰𝙶𝙴", callback_data='image'),
-            InlineKeyboardButton('𝙿𝙸𝙽𝙶', callback_data='pings')                                   
-            ],[                               
-            InlineKeyboardButton('𝙼𝚄𝚃𝙴', callback_data='restric'),
-            InlineKeyboardButton('𝙺𝙸𝙲𝙺', callback_data='zombies'),
-            InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin')
-            ],[
-            InlineKeyboardButton('𝙲𝙰𝚁𝙱𝙾𝙽', callback_data='carb'),
-            InlineKeyboardButton('𝙵𝙾𝙽𝙳', callback_data='fond'),
-            InlineKeyboardButton('𝚈𝚃-𝙳𝙻', callback_data='ytdl')
-            ],[
-            InlineKeyboardButton('🔮 𝚂𝚃𝙰𝚃𝚄𝚂 🔮', callback_data='stats')
+
+
+            
+            InlineKeyboardButton('🔮 Sᴛᴀᴛᴜs', callback_data='stats')
             ],[
             InlineKeyboardButton('🚫 𝙲𝙻𝙾𝚂𝙴', callback_data='close_data'),
             InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start')           
@@ -608,8 +601,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('❣️ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 ❣️', callback_data='source')
-            ],[
+           # InlineKeyboardButton('❣️ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 ❣️', callback_data='source')
+    #        ],[
             InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
             InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
         ]]
