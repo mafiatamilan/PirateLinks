@@ -824,12 +824,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
 
-        rjE= await message.reply('<b>⚡️ Fetching...</b>')
+        #rjE= await message.reply('<b>⚡️ Fetching...</b>')
         buttons = [[
             InlineKeyboardButton('🏃 Back', callback_data='help'),
             InlineKeyboardButton('Refresh ♻', callback_data='rfrsh')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        rjE = await message.reply('<b>⚡️ Fetching...</b>')
         total = await Media.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
@@ -842,12 +842,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
         )
     elif query.data == "rfrsh":
-        rjU = await message.reply('<b>⚡️ Fetching...</b>')
+        
         buttons = [[
             InlineKeyboardButton('🏃 Back', callback_data='help'),
             InlineKeyboardButton('Refresh ♻', callback_data='rfrsh')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
+        rjU = await message.reply('<b>⚡️ Fetching...</b>')
         total = await Media.count_documents()
         users = await db.total_users_count()
         chats = await db.total_chat_count()
